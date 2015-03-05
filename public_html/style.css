@@ -1,0 +1,60 @@
+h3{
+    margin: 5px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-width: 3px;
+
+}
+
+body{
+
+}
+
+.mainForm {
+    /*border: 1px solid BLACK;*/
+    /*margin-left: 10%;*/
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 BLACK;
+    background-color: rgba(220,220,220,0.7);
+    /*background-image: url("solar.jpg");*/
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    
+
+    /*center*/
+    margin: auto;
+    position: absolute;
+    top: 50px; 
+    left: 0; 
+    bottom: auto; 
+    right: 0;
+}
+
+div{
+    display: inline-block;
+    width: 500px;
+    margin-top: 10px;
+}
+
+label{
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+
+
+}
+/*.mainFormInside {
+
+}*/
+
+/*Submit btn*/
+.btn{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], select  {
+    width: 275px;
+}

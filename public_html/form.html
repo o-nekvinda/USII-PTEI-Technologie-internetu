@@ -7,50 +7,51 @@
         <title>Elektrárny</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="validateForm.js"></script>
     </head>
     <body>
         <div class="mainForm">
             <!--<div class="mainFormInside">-->
-                <form action="zpracuj.php" method="post">
+            <form action="zpracuj.php" method="post" onsubmit="return validateForm();">
 
-                    <h3>Vložení elektrárny do databáze</h3>
+                <h3>Vložení elektrárny do databáze</h3>
 
-                    <div>
-                        <label for="name">Jméno</label>
-                        <input type="text" id="name">
-                    </div>
+                <div>
+                    <label for="name" id="lblName">Jméno</label>
+                    <input type="text" id="name" onKeyup="checkName()">  <!-- placeholder="min. 3 znaky"-->
+                </div>
 
-                    <div>
-                        <label for="Typ">Typ: </label>
-                        <select id="Typ">
-                            <option value="Tepelna">Tepelná</option>
-                            <option value="Jaderna" >Jaderná</option>
-                            <option value="Vodni" >Vodní</option>
-                            <option value="Vetrna" >Větrná</option>
-                            <option value="Geotermalni" >Geotermální</option>
-                            <option value="Solarni" >Solární</option>
-                            <option value="Privalova" >Přívalová</option>
-                        </select>
-                    </div>
+                <div>
+                    <label for="Typ">Typ: </label>
+                    <select id="Typ">
+                        <option value="Tepelna">Tepelná</option>
+                        <option value="Jaderna" >Jaderná</option>
+                        <option value="Vodni" >Vodní</option>
+                        <option value="Vetrna" >Větrná</option>
+                        <option value="Geotermalni" >Geotermální</option>
+                        <option value="Solarni" >Solární</option>
+                        <option value="Privalova" >Přívalová</option>
+                    </select>
+                </div>
 
-                    <div>
-                        <label>Lokalita</label>
-                        <input type="radio" name="rdLokalita" value="Cesko" checked="checked">Česká Republika
-                        <input type="radio" name="rdLokalita" value="Slovensko">Slovensko
-                        <input type="radio" name="rdLokalita" value="Jine">Jiné
-                    </div>
+                <div>
+                    <label>Lokalita</label>
+                    <input type="radio" name="rdLokalita" value="Cesko" checked="checked">Česká Republika
+                    <input type="radio" name="rdLokalita" value="Slovensko">Slovensko
+                    <input type="radio" name="rdLokalita" value="Jine">Jiné
+                </div>
 
-                    <div>
-                        <label>Ve výstavbě</label>
-                        <input type="checkbox" name="CheckVystavba">
-                    </div>
-                    <div>
-                        <label></label>
-                        <input type="submit" value="Uložit do databáze" class="btn">
-                    </div>
+                <div>
+                    <label>Ve výstavbě</label>
+                    <input type="checkbox" name="CheckVystavba">
+                </div>
+                <div>
+                    <label></label>
+                    <input type="submit" value="Uložit do databáze" class="btn" disabled="disabled" id="btnSubmit">
+                </div>
 
-                </form>
-            </div>
+            </form>
+        </div>
         <!--</div>-->
     </body>
 </html>
